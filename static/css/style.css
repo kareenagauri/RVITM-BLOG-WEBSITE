@@ -1,0 +1,16 @@
+
+
+body{
+    background-color: rgb(215, 228, 228);
+}
+
+#demo{
+    font-size: 20px;
+
+}
+
+.div.shadow.p-3.mb-5.bg-body.rounded.postframe{
+
+    max-width: 600px !important;
+
+}
