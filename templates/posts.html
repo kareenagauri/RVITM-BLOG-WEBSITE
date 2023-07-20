@@ -1,4 +1,7 @@
 
+
+
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -16,7 +19,7 @@
 <br>
 
 {% for post in posts %}
-<div class="shadow p-3 mb-5 bg-body rounded postframe">
+<div class="shadow p-3 mb-5 bg-body rounded postframe  ">
     <h3><a href="{{ url_for('post',id=post.id) }}">{{ post.title }}</a></h3>
     <small>
 

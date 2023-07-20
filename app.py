@@ -306,6 +306,7 @@ def edit_post(id):
     if form.validate_on_submit():
         post.title = form.title.data
         post.content = form.content.data
+        
 
         #Update database
         db.session.add(post)
@@ -315,11 +316,12 @@ def edit_post(id):
         return redirect(url_for('post',id = post.id))
 
     if current_user.id == post.poster_id:
-
+        cat_data = Category.query.filter_by(Category_id=post.category_id).first()
+        form.category_name.data = cat_data.Category_name
         form.title.data = post.title
         #form.author.data = post.author
         form.slug.data = post.slug
-        form.content.data = post.content
+        form.content.data = post.content 
         return render_template('edit_post.html',form=form)
 
 

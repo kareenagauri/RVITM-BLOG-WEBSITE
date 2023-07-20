@@ -9,6 +9,13 @@ body{
 
 }
 
+.rounded {
+    border-radius: 20px!important;
+}
+
+.bg-body {
+    background-color: rgb(243, 152, 172)!important;
+}
 .div.shadow.p-3.mb-5.bg-body.rounded.postframe{
 
     max-width: 600px !important;
